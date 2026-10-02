@@ -28,7 +28,7 @@ export async function createProject(formData: FormData) {
         throw new Error("Workspace not found. Please refresh the page.");
     }
 
-    const project = await prisma.project.create({
+    await prisma.project.create({
         data: {
             name: validated.data.name,
             description: validated.data.description,
@@ -37,7 +37,7 @@ export async function createProject(formData: FormData) {
     });
 
     revalidatePath("/");
-    redirect(`/projects/${project.id}`);
+    redirect("/");
 }
 
 export async function updateProject(
