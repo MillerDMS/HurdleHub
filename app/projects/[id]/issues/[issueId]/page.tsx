@@ -68,8 +68,6 @@ export default async function IssuePage({
             >
                 ← Back to project
             </Link>
-
-            {/* Issue header */}
             <header className="mt-8 border-b border-gray-800 pb-8">
                 <div className="flex flex-wrap items-center gap-2">
                     <span className="text-sm font-medium text-gray-500">
@@ -99,7 +97,6 @@ export default async function IssuePage({
             </header>
 
             {isArchived ? (
-                /* Archived read-only view */
                 <section className="mt-8 rounded-xl border border-gray-800 bg-gray-900/30 p-6">
                     <div className="flex items-center justify-between gap-4 border-b border-gray-800 pb-5">
                         <div>
@@ -153,7 +150,6 @@ export default async function IssuePage({
                     </div>
                 </section>
             ) : (
-                /* Edit form */
                 <section className="mt-8">
                     <div className="mb-5">
                         <h2 className="text-lg font-semibold text-white">
@@ -266,8 +262,6 @@ export default async function IssuePage({
                     </form>
                 </section>
             )}
-
-            {/* Archive / restore */}
             {(issue.status === "Done" || isArchived) && (
                 <section className="mt-10 border-t border-gray-800 pt-8">
                     <h2 className="text-base font-semibold text-white">
@@ -289,12 +283,10 @@ export default async function IssuePage({
                     </div>
                 </section>
             )}
-
-            {/* Danger zone */}
             <section className="mt-10 border-t border-gray-800 pt-8">
                 <div className="rounded-xl border border-red-950 bg-red-950/10 p-6">
                     <h2 className="font-semibold text-red-400">
-                        Danger Zone
+                        Delete issue
                     </h2>
 
                     <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
