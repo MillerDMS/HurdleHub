@@ -24,7 +24,6 @@ export default async function HomePage() {
     },
   });
 
-  // Archived issues are excluded from active statistics.
   const activeIssues = projects.flatMap((project) =>
     project.issues.filter((issue) => issue.archivedAt === null)
   );
@@ -65,7 +64,6 @@ export default async function HomePage() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-12 sm:py-16">
-      {/* Dashboard header */}
       <header className="mb-10">
         <p className="mb-2 text-sm font-medium text-gray-500">
           Workspace
@@ -92,8 +90,6 @@ export default async function HomePage() {
           </Link>
         </div>
       </header>
-
-      {/* Dashboard statistics */}
       <section aria-label="Dashboard statistics">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
@@ -116,8 +112,6 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
-
-      {/* Projects */}
       <section className="mt-14">
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>

@@ -64,8 +64,6 @@ export default async function ProjectPage({
             >
                 ← Back to dashboard
             </Link>
-
-            {/* Project header */}
             <header className="mt-8 border-b border-gray-800 pb-10">
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                     <div className="max-w-2xl">
@@ -89,8 +87,6 @@ export default async function ProjectPage({
                         Edit Project
                     </Link>
                 </div>
-
-                {/* Project summary */}
                 <div className="mt-8 flex flex-wrap gap-3">
                     <div className="rounded-lg border border-gray-800 bg-gray-900/40 px-4 py-3">
                         <span className="text-lg font-semibold text-white">
@@ -125,7 +121,6 @@ export default async function ProjectPage({
                 </div>
             </header>
 
-            {/* Active issues */}
             <section className="mt-10">
                 <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <div>
@@ -175,7 +170,6 @@ export default async function ProjectPage({
                 )}
             </section>
 
-            {/* Archived issues */}
             <section className="mt-14 border-t border-gray-800 pt-10">
                 <div className="mb-6">
                     <h2 className="text-xl font-semibold tracking-tight text-white">
@@ -220,8 +214,6 @@ export default async function ProjectPage({
                     </div>
                 )}
             </section>
-
-            {/* Danger zone */}
             <section className="mt-14 border-t border-gray-800 pt-10">
                 <div className="rounded-xl border border-red-950 bg-red-950/10 p-6">
                     <h2 className="text-base font-semibold text-red-400">

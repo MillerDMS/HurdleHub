@@ -46,7 +46,6 @@ export default function IssueList({ issues }: IssueListProps) {
 
   return (
     <div>
-      {/* Filters */}
       <div className="rounded-xl border border-gray-800 bg-gray-900/30 p-4">
         <div className="grid gap-3 lg:grid-cols-[1fr_auto_auto]">
           <input
@@ -83,8 +82,6 @@ export default function IssueList({ issues }: IssueListProps) {
           </select>
         </div>
       </div>
-
-      {/* Results summary */}
       <div className="my-4 flex items-center justify-between gap-4">
         <p className="text-xs text-gray-500">
           Showing {filteredIssues.length} of {issues.length}{" "}
@@ -101,8 +98,6 @@ export default function IssueList({ issues }: IssueListProps) {
           </button>
         )}
       </div>
-
-      {/* Issue results */}
       {filteredIssues.length === 0 ? (
         <div className="rounded-xl border border-dashed border-gray-700 bg-gray-900/20 px-6 py-10 text-center">
           <p className="font-medium text-gray-300">
